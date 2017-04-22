@@ -1,4 +1,4 @@
-// gem5/mem/ruby/structures
+# gem5/mem/ruby/structures
 
 from m5.params import *
 from m5.proxy import *
