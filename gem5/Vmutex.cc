@@ -1,4 +1,4 @@
-//gem5/src/mem/ruby/structure
+//gem5/src/mem/ruby/structures
 
 #include "Vmutex.hh"
 #include <iostream>
