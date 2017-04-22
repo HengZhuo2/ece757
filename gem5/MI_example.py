@@ -1,4 +1,5 @@
 # gem5/configs/ruby
+# only add vmutex instantiation and passing it into L1Cache_Controller
 
 # Copyright (c) 2006-2007 The Regents of The University of Michigan
 # Copyright (c) 2009 Advanced Micro Devices, Inc.
@@ -88,7 +89,8 @@ def create_system(options, full_system, system, dma_ports, ruby_system):
             clk_domain = system.cpu[0].clk_domain
         else:
             clk_domain = system.cpu[i].clk_domain
-
+            
+        #added by Heng
         vmutex = vmutex_P();
 
         # Only one unified L1 cache exists. Can cache instructions and data.
@@ -97,7 +99,7 @@ def create_system(options, full_system, system, dma_ports, ruby_system):
                                       transitions_per_cycle=options.ports,
                                       clk_domain=clk_domain,
                                       ruby_system=ruby_system,
-                                      vmutex=vmutex)
+                                      vmutex=vmutex)#added by Heng
 
         cpu_seq = RubySequencer(version=i, icache=cache, dcache=cache,
                                 clk_domain=clk_domain, ruby_system=ruby_system)
