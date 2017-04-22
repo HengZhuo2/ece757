@@ -1,3 +1,5 @@
+//gem5/src/mem/ruby/structure
+
 #include "Vmutex.hh"
 #include <iostream>
 #include <vector>
